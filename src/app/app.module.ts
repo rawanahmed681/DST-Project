@@ -8,8 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './module/auth/login/login.component';
-import { RegisterComponent } from './module/auth/register/register.component';
+import { AuthModule } from './module/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +16,13 @@ import { RegisterComponent } from './module/auth/register/register.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    AboutComponent,
-    LoginComponent,
-    RegisterComponent
+    AboutComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthModule,
     FormsModule
   ],
   providers: [],
