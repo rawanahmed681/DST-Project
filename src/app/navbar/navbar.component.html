@@ -1,11 +1,29 @@
 <div class="header">
   <header>
-    <div class="header-photo" [ngStyle]="">
+    <div class="header-photo" >
+      <!-- [style.backgroundImage]="'url(' + imageUrl + ')'" -->
       <h1></h1>
       <p></p>
+      <img [src]="imageUrl" alt="test">
     </div>
-    <nav>
-
+    <nav class="p-4">
+      <ul class="nav nav-tab justify-content-end ">
+        <li class="nav-item">
+          <a class="nav-link text-dark active" data-bs-toggle="tab"  routerLink="/">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="">destination</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="/about">about us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="/sell">sell</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="/contuct">contuct us</a>
+        </li>
+      </ul>
     </nav>
   </header>
 </div>
