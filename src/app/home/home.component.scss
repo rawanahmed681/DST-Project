@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .frist_section{
     background-color: #DCDAD3;
 }
@@ -9,3 +10,20 @@
 .card-body h6{
     font-size: 13px !important;
 }
+=======
+
+.search-property{
+  border: 1px solid #1F1F1F;
+  margin: 15px 30px 15px 30px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.form-control, .form-select{
+  background-color: #1F1F1F;
+  color: #DCDAD3;
+  padding: 10px;
+}
+::placeholder{
+  color:#434343;
+}
+>>>>>>> Stashed changes
