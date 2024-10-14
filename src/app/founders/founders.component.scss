@@ -1,0 +1,47 @@
+h2 {
+  padding: 50px;
+}
+
+
+.founders-section {
+  position: relative;
+  padding: 20px 0;
+
+  .col-md-3 {
+    position: relative;
+    margin-bottom: 30px;
+    
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px 15px 0 0; 
+    }
+
+    .des {
+      background-color: #ffffff; 
+      border: 2px solid #000000;
+      border-radius: 25px;
+      padding: 15px;
+      position: absolute;
+      width: 93%; 
+      left: 50%;
+      bottom: -20px; 
+      transform: translateX(-50%);
+      text-align: center;
+      font-weight: bold;
+      height: 100px;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      
+      font-weight: black;
+    }
+
+    p {
+      font-size: 0.9em; 
+      color: #666; 
+    }
+  }
+}
