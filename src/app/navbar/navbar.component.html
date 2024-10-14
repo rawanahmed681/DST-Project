@@ -1,10 +1,12 @@
 <div class="header">
   <header>
-    <div class="header-photo" >
-      <!-- [style.backgroundImage]="'url(' + imageUrl + ')'" -->
-      <h1></h1>
-      <p></p>
-      <img [src]="imageUrl" alt="test">
+    <div class="header-image d-flex align-items-start flex-column"  [style.backgroundImage]="'url(' + imageUrl + ')'">
+      <div class="h-50 w-100 p-4">
+        <img src="assets/rawan-images/DSTLOGO.png" alt="">
+      </div>
+      <div class="text-white d-flex w-100 justify-content-center">
+        <p class="">{{homepara}}</p>
+      </div>
     </div>
     <nav class="p-4">
       <ul class="nav nav-tab justify-content-end ">

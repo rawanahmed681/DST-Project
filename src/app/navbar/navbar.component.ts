@@ -7,9 +7,13 @@ import {Router, NavigationEnd} from '@angular/router'
 })
 export class NavbarComponent implements OnInit {
 
-  imageUrl: string = '';
+  imageUrl: string = 'assets/rawan-images/cover1.png';
+  homepara: string= '';
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router) {
+    console.log('Image URL:', this.imageUrl);
+   }
 
   ngOnInit(): void {
     // Subscribe to route changes
@@ -22,13 +26,18 @@ export class NavbarComponent implements OnInit {
 
   // Function to update the image based on the current route
   updateNavbarImage(url: string): void {
-    if (url.includes('/home') || url.includes('/')) {
-      this.imageUrl = 'assets/rawan-images/cover1.png'; // Change to appropriate image for Home
-    } else if (url.includes('/about')) {
-      this.imageUrl = 'assets/rawan-images/cover2.png'; // Change to appropriateet image for About
+     if (url.includes('/about') ) {
+      this.imageUrl = 'assets/rawan-images/cover2.png'; 
+     this.homepara = 'ABOUT US';
     } else if (url.includes('/sell')) {
-      this.imageUrl = 'assets/rawan-images/sell1.png'; // Change to appropriate image for Sell
+      this.imageUrl = 'assets/rawan-images/sell1.png';
+       this.homepara = 'SELL YOUR PROPERTY WITH US';
     }
+    else if (url.includes('/home') || url.includes('/')) {
+      this.imageUrl = 'assets/rawan-images/cover1.png'; 
+      this.homepara = 'CHOOSING THE DESTINATION NOT THE PROPERT'
+    }
+    console.log('Image URL:', this.imageUrl);
   }
 
 }
