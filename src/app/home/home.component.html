@@ -1,31 +1,39 @@
 
 
-    
+    <form  (ngSubmit)="onSearch()">
     <div class="search-property row">
         <div class="col-9 row">
-          <div class=" mb-3 col-md-12 col-sm-12">
-            <input type="text" class="form-control rounded-5"  placeholder="Search Location, Compound, Developer Name">
+          <div class=" mb-3 col-md-12 col-sm-12 form-group">
+            <input type="text" class="form-control rounded-5" [(ngModel)]="searchCriteria.searchTerm" name="searchTerm"  placeholder="Search Location, Compound, Developer Name">
       
           </div>
           <div class="justify-content-lg-between row">
-            <div class=" mb-3 col-md-2 col-sm-4">
-              <select id="inputState" class="form-select rounded-5">
+            <div class=" mb-3 col-md-2 col-sm-4 form-group">
+              <select id="propertyState" [(ngModel)]="searchCriteria.propertyType" class="form-select rounded-5" name="propertyType">
                 <option selected>Property Type</option>
-                <option>...</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Villa">Villa</option>
+                <option value="Studio">Studio</option>
+                <option value="Doplix">Doplix</option>
               </select>
       
             </div>
-            <div class="col-md-2 col-sm-4">
-              <select id="inputState" class="form-select rounded-5">
+            <div class="col-md-2 col-sm-4 form-group">
+              <select id="priceState" class="form-select rounded-5" [(ngModel)]="searchCriteria.priceRange" name="priceRange">
                 <option selected>Price</option>
-                <option>...</option>
+                <option value="50000-100000">50,000-100,000</option>
+                <option value="100000-200000">100,000-200,000</option>
+                <option value="200000-300000">200,000-300,000</option>
               </select>
       
             </div>
             <div class="col-md-2 col-sm-4">
-              <select id="inputState" class="form-select rounded-5">
-                <option selected>Bathrooms</option>
-                <option>...</option>
+              <select id="bedroomState" class="form-select rounded-5" [(ngModel)]="searchCriteria.bedroomNum" name="bedroomNum">
+                <option selected>Bedrooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
               </select>
       
             </div>
@@ -38,7 +46,21 @@
         </div>
       </div>
     </div>
-
+</form>
+<div *ngIf="filteredProperties.length" class="card w-75 justify-content-center bg-dark text-white seach-div m-auto p-4">
+    <h2 class="bg-info">Search Results</h2>
+    <div *ngFor="let property of filteredProperties">
+      <p>{{ property.location }} - {{ property.compound }} - {{ property.developerName }} - 
+         {{ property.propertyType }} - ${{ property.price }} - 
+         {{ property.bedrooms }} Bedrooms - {{ property.bathrooms }} Bathrooms
+      </p>
+    </div>
+  </div>
+  
+  <!-- Message when no properties are found -->
+ 
+    <div *ngIf="!filteredProperties.length">
+        
     <div class="p-5 ">
 
         <span class="fs-4 fw-bold ps-4 "> Top Partners</span>
@@ -101,6 +123,13 @@
                 </div>
             </div>
         </section>
+
+            <p>No properties found matching your search criteria.</p>
+        
+      </div>
+  
+  
+    <div class="p-5 frist_section">
 
 
 
