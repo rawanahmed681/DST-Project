@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { AuthModule } from './module/auth/auth.module';
 import { SellComponent } from './sell/sell.component';
+import { AboutDstComponent } from './about-dst/about-dst.component';
+import { FoundersComponent } from './founders/founders.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SellComponent } from './sell/sell.component';
     NavbarComponent,
     FooterComponent,
     AboutComponent,
-    SellComponent
+    SellComponent,
+    AboutDstComponent,
+    FoundersComponent
 
   ],
   imports: [
