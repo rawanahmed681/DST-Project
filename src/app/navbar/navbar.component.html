@@ -1,5 +1,4 @@
 <div class="header">
-  <header>
     <div class="header-image d-flex align-items-start flex-column"  [style.backgroundImage]="'url(' + imageUrl + ')'">
       <div class="h-50 w-100 p-4">
         <img src="assets/rawan-images/DSTLOGO.png" alt="">
@@ -8,24 +7,26 @@
         <p class="">{{homepara}}</p>
       </div>
     </div>
-    <nav class="p-4">
-      <ul class="nav nav-tab justify-content-end ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav nav-tab justify-content-end navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-dark active" data-bs-toggle="tab"  routerLink="/">home</a>
+          <a class="nav-link text-dark active"   routerLink="/">home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="">destination</a>
+          <a class="nav-link text-dark"  routerLink="/about">about us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="/about">about us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="/sell">sell</a>
+          <a class="nav-link text-dark"  routerLink="/sell">sell</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark" data-bs-toggle="tab"  routerLink="/contuct">contuct us</a>
         </li>
       </ul>
+      </div>
     </nav>
-  </header>
+
 </div>

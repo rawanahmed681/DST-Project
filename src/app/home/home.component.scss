@@ -4,7 +4,7 @@
 }
 .card-b{
     background-color:  #F3F3F3;
-    
+
 }
 
 .card-body h6{
@@ -17,6 +17,10 @@
   border-radius: 20px;
   padding: 20px;
 }
+.search-w{
+  width: 100px;
+  margin: auto;
+}
 .form-control, .form-select{
   background-color: #1F1F1F;
   color: #DCDAD3;
@@ -24,5 +28,9 @@
 }
 ::placeholder{
   color:#434343;
+}
+
+.icon-white path {
+  fill: white;
 }
 
