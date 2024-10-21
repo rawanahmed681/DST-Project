@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import {Router, NavigationEnd} from '@angular/router'
 
 @Component({
@@ -6,7 +6,7 @@ import {Router, NavigationEnd} from '@angular/router'
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements DoCheck {
 
   imageUrl: string = 'assets/rawan-images/cover1.png';
   homepara: string= '';
@@ -16,13 +16,20 @@ export class NavbarComponent implements OnInit {
     console.log('Image URL:', this.imageUrl);
    }
 
-  ngOnInit(): void {
+  ngDoCheck(): void {
     // Subscribe to route changes
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.updateNavbarImage(event.url);
       }
     });
+  }
+
+  scrollToFooter() {
+    const footer = document.getElementById('contact');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+    }
   }
 
 

@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  contactData = {
+    name: '',
+    phoneNum: null,
+    destination: ''
+  };
+
+  onSubmit() {
+    localStorage.setItem('contactUsData', JSON.stringify(this.contactData));
+    this.contactData.name= '';
+    this.contactData.phoneNum = null;
+    this.contactData.destination = '';
+    alert('Contact information saved!');
+  }
+
 }

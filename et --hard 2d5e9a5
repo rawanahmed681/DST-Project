@@ -1,0 +1,27 @@
+[33m9dd60db[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: pull origin main (start): checkout 9dd60dbc6d9291857642802af3ec158d4fc295b5
+[33m2d5e9a5[m[33m ([m[1;32mmain[m[33m)[m HEAD@{1}: commit: updating navbar and footer
+[33mcfc7a70[m HEAD@{2}: rebase (continue) (finish): returning to refs/heads/main
+[33mcfc7a70[m HEAD@{3}: commit: modify home component
+[33m84f821f[m HEAD@{4}: commit: adding function search for for home
+[33mb9163dc[m HEAD@{5}: pull origin main (start): checkout b9163dcd4d9fcea79f42c4838124fc5811cdaee4
+[33mcbe917b[m HEAD@{6}: commit: adding function search in home
+[33mced343d[m HEAD@{7}: commit: handeling nabvar images and footer links
+[33m6270bed[m HEAD@{8}: commit: adding sell component
+[33m8757ef6[m HEAD@{9}: commit: editing home component
+[33m5f6328e[m HEAD@{10}: commit: adding elements for footer and navbar
+[33m6b55780[m HEAD@{11}: pull origin main (finish): returning to refs/heads/main
+[33m6b55780[m HEAD@{12}: pull origin main (pick): adding navbar photos
+[33m5d289dd[m HEAD@{13}: pull origin main (pick): adding navbar elements and style
+[33mc2e2402[m HEAD@{14}: pull origin main (pick): add footer elements
+[33mcc1a0cf[m HEAD@{15}: pull origin main (pick): handeling display components and style
+[33mbf3cbaa[m HEAD@{16}: pull origin main (pick): adding routing
+[33m4a8a103[m HEAD@{17}: pull origin main (start): checkout 4a8a10334ef01a42df20b42aeba8e0ba8d7dbe93
+[33m8417507[m HEAD@{18}: commit: adding navbar photos
+[33m42595e6[m HEAD@{19}: commit: adding navbar elements and style
+[33m8ba4c79[m HEAD@{20}: commit: add footer elements
+[33ma29f866[m HEAD@{21}: commit: handeling display components and style
+[33m7a42205[m HEAD@{22}: commit: adding routing
+[33mbe6e414[m HEAD@{23}: commit: modify auth module
+[33mba169a4[m HEAD@{24}: commit: adding components and modules for project
+[33mf57789f[m HEAD@{25}: Branch: renamed refs/heads/master to refs/heads/main
+[33mf57789f[m HEAD@{27}: commit (initial): creating components and module for the project

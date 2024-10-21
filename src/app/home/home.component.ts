@@ -33,18 +33,7 @@ export class HomeComponent {
     ];
 
   }
-  ngOnInit(): void {
-    const savedCriteria = localStorage.getItem('searchCriteria');
-    if (savedCriteria) {
-      this.searchCriteria = JSON.parse(savedCriteria);
-      // Apply the saved search criteria automatically
-    }
-    this.searchCriteria.searchTerm = '';
-    this.searchCriteria.propertyType = '';
-    this.searchCriteria.priceRange = '';
-    this.searchCriteria.bedroomNum = null;
-
-  }
+  
 
   onSearch() {
     console.log("Search Criteria:", this.searchCriteria);

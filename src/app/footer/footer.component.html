@@ -1,26 +1,26 @@
-<div class="footer">
+<footer class="footer" id="contact">
   <div class="footer-header">
     <p>If You Need Expert Advice...</p>
     <h1>Please Contact Us</h1>
     <p>Fill Your Data and We will contact you Soon.</p>
   </div>
-  <div class="form">
-    <div class=" mb-3 col-md-6 col-sm-9">
-      <input type="text" class="form-control rounded-5"  placeholder="Your Name">
+  <form class="form" (ngSubmit)="onSubmit()">
+    <div class=" mb-3 col-md-6 col-sm-9 form-group">
+      <input type="text" class="form-control rounded-5"  placeholder="Your Name" name="name" [(ngModel)]="contactData.name">
 
     </div>
-    <div class=" mb-3 col-md-6 col-sm-9">
-      <input type="text" class="form-control rounded-5" placeholder="Phone Number">
+    <div class=" mb-3 col-md-6 col-sm-9 form-group">
+      <input type="text" class="form-control rounded-5" placeholder="Phone Number" name="phone" [(ngModel)]="contactData.phoneNum">
 
     </div>
-    <div class="col-md-6 col-sm-9">
-      <input type="text" class="form-control rounded-5"  placeholder="Destination You Prefer..">
+    <div class="col-md-6 col-sm-9 form-group">
+      <input type="text" class="form-control rounded-5"  placeholder="Destination You Prefer.." name="Destination" [(ngModel)]="contactData.destination">
 
     </div>
     <div class="col-md-6 col-sm-9 mt-3 mb-3">
       <button type="submit" class="btn form-control bg-light rounded-5 text-black">submit</button>
     </div>
-  </div>
+  </form>
   <div class="location">
     <small>Or You Can Visit Us At</small>
     <p>140, Street 3, From Akhnatoun st <br>
@@ -40,4 +40,4 @@
       <a href="">TIKTOK</a>
     </div>
   </div>
-</div>
+</footer>

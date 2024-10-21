@@ -60,9 +60,9 @@
   <!-- Message when no properties are found -->
 
 
-  <div *ngIf="searchPerformed && !filteredProperties.length">
+  <ng-container *ngIf="searchPerformed && !filteredProperties.length">
     <p class="text-center">No properties found matching your search criteria.</p>
-  </div>
+  </ng-container>
 
 
     <div class="p-5 ">
