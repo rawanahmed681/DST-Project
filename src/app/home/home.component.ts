@@ -76,5 +76,58 @@ export class HomeComponent {
 
   }
 
+
+  
+   // Developers list
+   developers = [
+    {
+      name: ' New Cairo  ',
+      logo: '../../assets/images/salma-images/Apartment - Taj city.svg',
+      description: 'Apartment - Taj city',
+      title:"DM Downpayment/ 176,000 monthly /9 years",
+      money:"9,400,00 EGP"
+    },
+    {
+      name: ' New Cairo  ',
+      logo: '../../assets/images/salma-images/Apartment - Taj city.svg',
+      description: 'Apartment - Taj city',
+      title:"DM Downpayment/ 176,000 monthly /9 years",
+      money:"9,400,00 EGP"
+    },
+    {
+      name: ' New Cairo  ',
+      logo: '../../assets/images/salma-images/Apartment - Taj city.svg',
+      description: 'Apartment - Taj city',
+      title:"DM Downpayment/ 176,000 monthly /9 years",
+      money:"9,400,00 EGP"
+    },
+
+  ];
+
+  // New Launches list
+  newLaunches = [
+    {
+      
+      image: '../../assets/images/salma-images/plage.svg',
+      
+    },
+    {
+      
+      image: '../../assets/images/salma-images/mar bay.png',
+      
+    },
+    {
+      
+      image: '../../assets/images/salma-images/safia.svg',
+    
+    },
+    {
+      
+      image: '../../assets/images/salma-images/summer.svg',
+     
+    }
+  ];
+
+
 }
 
