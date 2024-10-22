@@ -1,1 +1,82 @@
-
+*{
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;   /* Center the container */
+  }
+  
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .step-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .step-circle {
+    width: 100px;
+    height: 80px;
+    background-color: white; /* Circle background color */
+    color: #333;            /* Circle text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-right: -50px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .step-details {
+    background-color: #333;
+    padding: 15px 20px;
+    padding-left: 60px;
+    border-radius: 50px;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    z-index: 0;
+    font-size: 16px;
+  }
+  
+  .step-wrapper::before {
+    content: "";
+    position: absolute;
+    left: -10px; /* Negative left to overlap the step number */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .step-circle {
+      width: 80px;
+      height: 80px;
+      font-size: 14px;
+    }
+  
+    .step-details {
+      font-size: 14px;
+      padding: 10px 15px;
+      padding-left: 60px;
+    }
+  
+    .step-wrapper::before {
+      width: 80px;
+      height: 80px;
+    }
+}
