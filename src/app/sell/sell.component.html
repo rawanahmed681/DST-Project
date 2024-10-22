@@ -19,29 +19,37 @@
 </div>
 
 
-<form class="d-flex justify-content-center row  ">
+<form class="d-flex justify-content-center row" [formGroup]="clientform">
 
     <h3 class="pb-3 pt-5 text-center">PLEASE COMPLETE THIS FORM</h3>
-
-    <input type="text" class="my-2 col-5 rounded-pill py-3 bg-dark text-white" placeholder="Your Name"
-        aria-label="Your Name">
+    <div class="form-floating col-5  ">
+        <input type="text" class="my-2 rounded-pill py-3 bg-dark text-white w-100" placeholder="Your Name"
+            formControlName="cname" required>
+        <div [hidden]="cname?.valid ||cname?.untouched ">
+            <small class="alert alert-danger" *ngIf="cname?.errors?.['required']">
+                Enter your Name please
+            </small>
+        </div>
+    </div>
 
     <input type="text" class="my-2 col-5  rounded-pill py-3  bg-dark text-white" placeholder="Phone Number"
-        aria-label="Phone Number">
-
+        formControlName="phonenumber" required>
 
     <input type="text" class="my-2 col-5  rounded-pill p-3 bg-dark text-white" placeholder="Location"
-        aria-label="Location">
+        formControlName="location">
 
-    <input type="text" class="my-2 col-5  rounded-pill p-3 bg-dark text-white" placeholder="Compoud"
-        aria-label="Compoud">
+    <input type="text" class="my-2 col-5  rounded-pill p-3 bg-dark text-white" placeholder="Compound"
+        formControlName="Compound">
 
     <input type="text" class="my-2 col-10 rounded-pill p-3 bg-dark text-white" placeholder="Property Type"
-        aria-label="Property Type">
+        formControlName="PropertyType">
 
-    <input type="text" class="my-2 col-10 rounded-4 p-5 bg-dark text-white" placeholder="Property Description"
-        aria-label="Property Description">
+    <!-- <input type="text" class="my-2 col-10 rounded-4 p-5 bg-dark text-white" placeholder="Property Description"
+    formControlName="Property Description"> -->
+    <textarea formControlName="PropertyDescription" rows="5" placeholder="Property Description"
+        class="my-2 col-10 rounded-4  bg-dark text-white"></textarea>
 
-    <button class="btn btn-light rounded-pill col-3  my-3" type="submit">Submit</button>
+    <button class="btn btn-light rounded-pill col-3  my-3" [disabled]="clientform.invalid" (click)="showSuccess()" >Submit</button>
+
 
 </form>
